@@ -25,9 +25,9 @@
         "SNOWFLAKE_JWT",
         "EXTERNALBROWSER",
         "OAUTH",
-        "OKTASSO"
+        "https://vivint.okta.com"
       ],
-      "enumNames": ["User & Password", "Key Pair", "Browser Based SSO", "OAuth", "Okta SSO"],
+      "enumNames": ["User & Password", "Key Pair", "Browser Based SSO", "OAuth", "https://vivint.okta.com"],
       "default": "SNOWFLAKE"
     },
     "username": {
@@ -146,7 +146,7 @@
             }
           },
           "required": [
-            "Password"
+            "password"
           ]
         }
       ]
