@@ -154,7 +154,6 @@
   },
   "required": [
     "account",
-    "database",
     "warehouse",
     "authenticator",
     "username"
