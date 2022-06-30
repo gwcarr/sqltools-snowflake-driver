@@ -1,3 +1,9 @@
+0.4.3 (2022-06-30)
+-------------------
+
+- Updated SDK
+- Added vivint okta authentication as an option
+
 0.4.2 (2021-03-21)
 -------------------
 
