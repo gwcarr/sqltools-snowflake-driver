@@ -24,9 +24,10 @@
         "SNOWFLAKE",
         "SNOWFLAKE_JWT",
         "EXTERNALBROWSER",
-        "OAUTH"
+        "OAUTH",
+        "OKTASSO"
       ],
-      "enumNames": ["User & Password", "Key Pair", "Browser Based SSO", "OAuth"],
+      "enumNames": ["User & Password", "Key Pair", "Browser Based SSO", "OAuth", "Okta SSO"],
       "default": "SNOWFLAKE"
     },
     "username": {
@@ -41,7 +42,7 @@
         "ocspFailOpen": {
           "title": "OCSP Fail-Open",
           "type": "boolean",
-          "default": true
+          "default": false
         }
       }
     },
@@ -132,6 +133,20 @@
           },
           "required": [
             "token"
+          ]
+        },
+        {
+          "properties": {
+            "authenticator": {
+              "enum": ["https://vivint.okta.com"]
+            },
+            "password": {
+              "title": "Password",
+              "type": "string"
+            }
+          },
+          "required": [
+            "Password"
           ]
         }
       ]

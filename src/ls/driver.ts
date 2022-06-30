@@ -23,7 +23,7 @@ export default class SnowflakeDriver extends AbstractDriver<DriverLib, DriverOpt
       privateKeyPass: this.credentials.privateKeyPass,
       token: this.credentials.token,
       username: this.credentials.username,
-      password: this.credentials.password
+      password: this.credentials.password,
     };
     connOptions = {
       ...connOptions,
@@ -58,8 +58,8 @@ export default class SnowflakeDriver extends AbstractDriver<DriverLib, DriverOpt
     try {
       const conn = new Snowflake(connOptions, loggingOptions, configureOptions);
 
-      // Browser Based SSO requires connectAsync
-      if(connOptions.authenticator === 'EXTERNALBROWSER') {
+      // Browser Based SSO (or OKTA) requires connectAsync
+      if(connOptions.authenticator === 'EXTERNALBROWSER' || connOptions.authenticator === "https://vivint.okta.com") {
         await conn.connectAsync(); 
       }
       else {
